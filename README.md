@@ -1,8 +1,8 @@
 <p align="center"><a href="https://nodei.co/npm/discord-welcome/"><img src="https://nodei.co/npm/discord-welcome.png"></a></p>
 
 # discordjs-welcome
-An extremely simple module that perform private or public welcome messages for DiscordJS v11
-Not Compatible with DiscordJS V12 yet
+An extremely simple module that perform private or public welcome messages for Discord.js v12
+Please use "discord-welcome@1.5.1 discord.js-v11" to install a Discord.js v11 compatible version.
 
 ## Installation
 This module assumes you already have a basic [Discord.js](https://discord.js.org/#/) bot setup.
@@ -64,8 +64,8 @@ Liens:  https://www.bucherons.ca et https://www.gardiensdulys.com
 You can reach me via my Discord Development Server at https://discord.gg/Tmtjkwz
 
 ###History:  
-2.0.1 Initial version that support DiscordJS v12  
-1.5.1 Added reference to GitHub repository, last V11 compatible version, install with "npm install discord-welcome@1.5.1"  
+2.0.2 Initial version that support DiscordJS v12, v11 tagged and documented
+1.5.1 Added reference to GitHub repository, last V11 compatible version, install with "discord-welcome@1.5.1 discord.js-v11"  
 1.5.0 Improved collection.find to the new format (remove deprecation warning in discord.js v11.4 and prepare for v12)  
 1.4.2 Improved README.md instructions  
 1.4.1 Improved README.md instructions  
