@@ -1,0 +1,24 @@
+{
+  "name": "discord-welcome",
+  "version": "1.5.1",
+  "description": "Simple Discord.js Module that send private or public welcome messages",
+  "main": "welcome.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "keywords": [
+    "Discord",
+    "welcome",
+    "greeting",
+    "discord.js"
+  ],
+  "author": "Flisher",
+  "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/FlisherOfatale/discord-welcome.git"
+  }
+}
