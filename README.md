@@ -64,8 +64,9 @@ Liens:  https://www.bucherons.ca et https://www.gardiensdulys.com
 You can reach me via my Discord Development Server at https://discord.gg/Tmtjkwz
 
 ###History:  
-1.5.1 Added reference to GitHub repository
-1.5.0 Improved collection.find to the new format (remove deprecation warning in discord.js v11.4 and prepare for v12)
+2.0.0 Initial version that support DiscordJS v12
+1.5.1 Added reference to GitHub repository, last V11 compatible version, install with "npm install discord-welcome@1.5.1"
+1.5.0 Improved collection.find to the new format (remove deprecation warning in discord.js v11.4 and prepare for v12)  
 1.4.2 Improved README.md instructions  
 1.4.1 Improved README.md instructions  
 1.4.0 Added @GUILDNAME tag and embed support. Note that Embed doesnt' support tag replacement yet  

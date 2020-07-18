@@ -1,13 +1,13 @@
 {
   "name": "discord-welcome",
-  "version": "1.5.1",
-  "description": "Simple Discord.js Module that send private or public welcome messages",
+  "version": "2.0.0",
+  "description": "Simple Discord.js v12 Module that send private or public welcome messages",
   "main": "welcome.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^12.2.0"
   },
   "keywords": [
     "Discord",
