@@ -1,8 +1,8 @@
 {
   "name": "discord-welcome",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Simple Discord.js v12 Module that send private or public welcome messages",
-  "main": "welcome.js",
+  "main": "discord-welcome.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
