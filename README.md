@@ -66,13 +66,3 @@ You can reach me via my Discord Development Server at https://discord.gg/Tmtjkwz
 ###History:  
 2.0.2 Initial version that support DiscordJS v12, v11 tagged and documented
 1.5.1 Added reference to GitHub repository, last V11 compatible version, install with "npm i discord-welcome@1.5.1 discord.js-v11"  
-1.5.0 Improved collection.find to the new format (remove deprecation warning in discord.js v11.4 and prepare for v12)  
-1.4.2 Improved README.md instructions  
-1.4.1 Improved README.md instructions  
-1.4.0 Added @GUILDNAME tag and embed support. Note that Embed doesnt' support tag replacement yet  
-1.3.1 Updating README.me code sample  
-1.3.0 Added multi-server support  
-1.2.2 Added the ability to use channel name instead of ID  
-1.1.0 Added permission validation before sending public message, and report to console on permissions errors  
-1.0.1 Added proper description in the README.md  
-1.0.0 Initial publish
