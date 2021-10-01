@@ -1,6 +1,6 @@
 {
   "name": "discord-welcome",
-  "version": "3.0.1",
+  "version": "3.0.3",
   "description": "Simple Discord.js v13 Module that send private or public welcome messages",
   "main": "discord-welcome.js",
   "scripts": {

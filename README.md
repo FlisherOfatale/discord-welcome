@@ -72,6 +72,7 @@ Liens:  https://www.bucherons.ca et https://www.gardiensdulys.com
 You can reach me via my Discord Development Server at https://discord.gg/Tmtjkwz
 
 ###History:  
-3.0.1 Adjsted for DiscordJS V13 release
+3.0.3 Bugfix
+3.0.0 Adjsted for DiscordJS V13 release
 2.0.2 Initial version that support DiscordJS v12, v11 tagged and documented  
 1.5.1 Added reference to GitHub repository, last V11 compatible version, install with "npm i discord-welcome@1.5.1 discord.js-v11"  

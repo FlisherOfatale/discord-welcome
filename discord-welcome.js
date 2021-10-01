@@ -9,12 +9,12 @@
 
 */
 
-module.exports = function (bot, options) {
+module.exports = function (client, options) {
 
   const description = {
     name: `discord-welcome`,
     filename: `discord-welcome.js`,
-    version: `3.0.1`
+    version: `3.0.3`
   }
 
   console.log(`Module: ${description.name} | Loaded - version ${description.version} from ("${description.filename}")`)
@@ -43,13 +43,13 @@ module.exports = function (bot, options) {
       }
     }
   }
-  // Set options
-  privatemsg = (options && options.privatemsg) || (options[member.guild.id] && options[member.guild.id].privatemsg) || null;
-  publicmsg = (options && options.publicmsg) || (options[member.guild.id] && options[member.guild.id].publicmsg) || null;
-  publicchannel = (options && options.publicchannel) || (options[member.guild.id] && options[member.guild.id].publicchannel) || null;
 
   // Event Handlers
-  bot.on('guildMemberAdd', member => {
+  client.on('guildMemberAdd', member => {
+    // Set options
+    let privatemsg = (options && options.privatemsg) || (options[member.guild.id] && options[member.guild.id].privatemsg) || null;
+    let publicmsg = (options && options.publicmsg) || (options[member.guild.id] && options[member.guild.id].publicmsg) || null;
+    let publicchannel = (options && options.publicchannel) || (options[member.guild.id] && options[member.guild.id].publicchannel) || null;
 
     // ********** CODE FOR PUBLIC MESSAGE **********  
     if (publicmsg && publicchannel) {
@@ -57,7 +57,7 @@ module.exports = function (bot, options) {
       if (!channel) {
         console.log(`Channel "${publicchannel}" not found`);
       } else {
-        if (channel.permissionsFor(bot.user).has('SEND_MESSAGES')) {
+        if (channel.permissionsFor(client.user).has('SEND_MESSAGES')) {
           // Prepare the Message by replacing the @MEMBER tag to the user mention
           if (typeof publicmsg === "object") {
             // Embed
