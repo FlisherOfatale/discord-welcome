@@ -11,25 +11,45 @@
 
 module.exports = function (bot, options) {
 
+  const description = {
+    name: `discord-welcome`,
+    filename: `discord-welcome.js`,
+    version: `3.0.1`
+  }
+
+  console.log(`Module: ${description.name} | Loaded - version ${description.version} from ("${description.filename}")`)
+  const DiscordJSversion = require("discord.js").version.substring(0, 2)
+
+  if (DiscordJSversion === '11') console.error("This version of discord-welcome only run on DiscordJS V13 and up, please run \"npm i discord-playing@discord.js-v11\" to install an older version")
+  if (DiscordJSversion === '12') console.error("This version of discord-welcome only run on DiscordJS V13 and up, please run \"npm i discord-playing@discord.js-v12\" to install an older version")
+  if (DiscordJSversion !== '13') return
+
+  // Check that required Gateway Intention
+  const {
+    Intents
+  } = require('discord.js');
+  const liveIntent = new Intents(client.options.intents)
+  const requiredIntent = ['GUILDS', 'GUILD_MEMBERS']
+  const gotAllIntent = liveIntent.has(requiredIntent)
+
+  if (gotAllIntent) {
+    // continue to run
+  } else {
+    console.log(`Module: ${description.name} | Version ${description.version} NOT initialized due to the following reasons ")`)
+    for (let i in requiredIntent) {
+      let checkedIntent = requiredIntent[i]
+      if (!liveIntent.has(requiredIntent[i])) {
+        console.log(`Module: ${description.name} | Missing Gateway Intent ${requiredIntent[i]}`)
+      }
+    }
+  }
+  // Set options
+  privatemsg = (options && options.privatemsg) || (options[member.guild.id] && options[member.guild.id].privatemsg) || null;
+  publicmsg = (options && options.publicmsg) || (options[member.guild.id] && options[member.guild.id].publicmsg) || null;
+  publicchannel = (options && options.publicchannel) || (options[member.guild.id] && options[member.guild.id].publicchannel) || null;
+
   // Event Handlers
   bot.on('guildMemberAdd', member => {
-    const description = {
-      name: `discord-welcome`,
-      filename: `discord-welcome.js`,
-      version: `2.0.2`
-    }
-
-
-    // Check if version is 12, if not, abort
-    let DiscordJSversion = require('discord.js').version
-    if ( DiscordJSversion.substring(0,2) !== "12" ) console.error(`This version of discord-lobby only run on DiscordJS v12 and up, please run "npm install discord-welcome@1.5.1" to install an DiscordJS v11`)
-    if ( DiscordJSversion.substring(0,2) !== "12" ) return
-
-    // Set options
-    privatemsg = (options && options.privatemsg) || (options[member.guild.id] && options[member.guild.id].privatemsg) || null;
-    publicmsg = (options && options.publicmsg) || (options[member.guild.id] && options[member.guild.id].publicmsg) || null;
-    publicchannel = (options && options.publicchannel) || (options[member.guild.id] && options[member.guild.id].publicchannel) || null;
-
 
     // ********** CODE FOR PUBLIC MESSAGE **********  
     if (publicmsg && publicchannel) {
